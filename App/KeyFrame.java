@@ -347,4 +347,154 @@ class Panel extends JPanel{
         
         this.add(c2);
     }
+    
+    public void clickC(){
+        c.setBackground(Color.LIGHT_GRAY);
+        ch.setBackground(Color.LIGHT_GRAY);
+        cm.start();
+    }
+    
+    public void clickCS(){
+        csk.setBackground(Color.GRAY);
+        csm.start();
+    }
+    
+    public void clickD(){
+        d.setBackground(Color.LIGHT_GRAY);
+        dh.setBackground(Color.LIGHT_GRAY);
+        dh2.setBackground(Color.LIGHT_GRAY);
+        dm.start();
+    }
+    
+    public void clickDS(){
+        dsk.setBackground(Color.GRAY);
+        dsm.start();
+    }
+    
+    public void clickE(){
+        e.setBackground(Color.LIGHT_GRAY);
+        eh.setBackground(Color.LIGHT_GRAY);
+        em.start();
+    }
+    
+    public void clickF(){
+        f.setBackground(Color.LIGHT_GRAY);
+        fh.setBackground(Color.LIGHT_GRAY);
+        fm.start();
+    }
+    
+    public void clickFS(){
+        fsk.setBackground(Color.GRAY);
+        fsm.start();
+    }
+    
+    public void clickG(){
+        g.setBackground(Color.LIGHT_GRAY);
+        gh.setBackground(Color.LIGHT_GRAY);
+        gh2.setBackground(Color.LIGHT_GRAY);
+        gm.start();
+    }
+    
+    public void clickGS(){
+        gsk.setBackground(Color.GRAY);
+        gsm.start();
+    }
+    
+    public void clickA(){
+        a.setBackground(Color.LIGHT_GRAY);
+        ah.setBackground(Color.LIGHT_GRAY);
+        ah2.setBackground(Color.LIGHT_GRAY);
+        am.start();
+    }
+    
+    public void clickAS(){
+        ask.setBackground(Color.GRAY);
+        am.start();
+    }
+    
+    public void clickB(){
+        b.setBackground(Color.LIGHT_GRAY);
+        bh.setBackground(Color.LIGHT_GRAY);
+        bm.start();
+    }
+    
+    public void clickC2(){
+        c2.setBackground(Color.LIGHT_GRAY);
+        c2m.start();
+    }
+    
+    public void releaseC(){
+        c.setBackground(Color.WHITE);
+        ch.setBackground(Color.WHITE);
+        cm.stop();
+    }
+    
+    public void releaseCS(){
+        csk.setBackground(Color.BLACK);
+        csm.stop();
+    }
+    
+    public void releaseD(){
+        d.setBackground(Color.WHITE);
+        dh.setBackground(Color.WHITE);
+        dh2.setBackground(Color.WHITE);
+        dm.stop();
+    }
+    
+    public void releaseDS(){
+        dsk.setBackground(Color.BLACK);
+        dsm.stop();
+    }
+    
+    public void releaseE(){
+        e.setBackground(Color.WHITE);
+        eh.setBackground(Color.WHITE);
+        em.stop();
+    }
+    
+    public void releaseF(){
+        f.setBackground(Color.WHITE);
+        fh.setBackground(Color.WHITE);
+        fm.stop();
+    }
+    
+    public void releaseFS(){
+        fsk.setBackground(Color.BLACK);
+        fsm.stop();
+    }
+    
+    public void releaseG(){
+        g.setBackground(Color.WHITE);
+        gh.setBackground(Color.WHITE);
+        gh2.setBackground(Color.WHITE);
+        gm.stop();
+    }
+    
+    public void releaseGS(){
+        gsk.setBackground(Color.BLACK);
+        gsm.stop();
+    }
+    
+    public void releaseA(){
+        a.setBackground(Color.WHITE);
+        ah.setBackground(Color.WHITE);
+        ah2.setBackground(Color.WHITE);
+        am.stop();
+    }
+    
+    public void releaseAS(){
+        ask.setBackground(Color.BLACK);
+        am.stop();
+    }
+    
+    public void releaseB(){
+        b.setBackground(Color.WHITE);
+        bh.setBackground(Color.WHITE);
+        bm.stop();
+    }
+    
+    public void releaseC2(){
+        c2.setBackground(Color.BLACK);
+        c2m.stop();
+    }
 }
