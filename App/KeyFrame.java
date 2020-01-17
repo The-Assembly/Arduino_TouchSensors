@@ -4,6 +4,9 @@ import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.GridLayout;
 import java.awt.Toolkit;
+import java.awt.event.KeyAdapter;
+import java.awt.event.KeyEvent;
+import java.awt.geom.RoundRectangle2D;
 import java.io.File;
 import java.io.IOException;
 import java.util.logging.Level;
@@ -25,13 +28,197 @@ import javax.swing.SwingConstants;
  */
 public class KeyFrame extends JFrame{
     public KeyFrame(){
-        this.setSize(Toolkit.getDefaultToolkit().getScreenSize().width/2, Toolkit.getDefaultToolkit().getScreenSize().height/3);
-        this.setLocationRelativeTo(null);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        this.setLayout(new GridLayout(1,1));
-        this.add(new Panel());
+        Panel panel = new Panel();
+        this.add(panel);
+        
+        this.addKeyListener(new KeyAdapter(){
+            @Override
+            public void keyPressed(KeyEvent e){
+                switch(e.getKeyCode()){
+                    case KeyEvent.VK_A: {
+                    try {
+                        panel.clickC();
+                    } catch (LineUnavailableException ex) {
+                        Logger.getLogger(KeyFrame.class.getName()).log(Level.SEVERE, null, ex);
+                    } catch (IOException ex) {
+                        Logger.getLogger(KeyFrame.class.getName()).log(Level.SEVERE, null, ex);
+                    } catch (UnsupportedAudioFileException ex) {
+                        Logger.getLogger(KeyFrame.class.getName()).log(Level.SEVERE, null, ex);
+                    }
+                }
+break;
+                    case KeyEvent.VK_W: {
+                    try {
+                        panel.clickCS();
+                    } catch (UnsupportedAudioFileException ex) {
+                        Logger.getLogger(KeyFrame.class.getName()).log(Level.SEVERE, null, ex);
+                    } catch (IOException ex) {
+                        Logger.getLogger(KeyFrame.class.getName()).log(Level.SEVERE, null, ex);
+                    } catch (LineUnavailableException ex) {
+                        Logger.getLogger(KeyFrame.class.getName()).log(Level.SEVERE, null, ex);
+                    }
+                }
+break;
+                    case KeyEvent.VK_S: {
+                    try {
+                        panel.clickD();
+                    } catch (UnsupportedAudioFileException ex) {
+                        Logger.getLogger(KeyFrame.class.getName()).log(Level.SEVERE, null, ex);
+                    } catch (IOException ex) {
+                        Logger.getLogger(KeyFrame.class.getName()).log(Level.SEVERE, null, ex);
+                    } catch (LineUnavailableException ex) {
+                        Logger.getLogger(KeyFrame.class.getName()).log(Level.SEVERE, null, ex);
+                    }
+                }
+break;
+                    case KeyEvent.VK_E: {
+                    try {
+                        panel.clickDS();
+                    } catch (LineUnavailableException ex) {
+                        Logger.getLogger(KeyFrame.class.getName()).log(Level.SEVERE, null, ex);
+                    } catch (IOException ex) {
+                        Logger.getLogger(KeyFrame.class.getName()).log(Level.SEVERE, null, ex);
+                    } catch (UnsupportedAudioFileException ex) {
+                        Logger.getLogger(KeyFrame.class.getName()).log(Level.SEVERE, null, ex);
+                    }
+                }
+break;
+                    case KeyEvent.VK_D: {
+                    try {
+                        panel.clickE();
+                    } catch (UnsupportedAudioFileException ex) {
+                        Logger.getLogger(KeyFrame.class.getName()).log(Level.SEVERE, null, ex);
+                    } catch (IOException ex) {
+                        Logger.getLogger(KeyFrame.class.getName()).log(Level.SEVERE, null, ex);
+                    } catch (LineUnavailableException ex) {
+                        Logger.getLogger(KeyFrame.class.getName()).log(Level.SEVERE, null, ex);
+                    }
+                }
+break;
+                    case KeyEvent.VK_F: {
+                    try {
+                        panel.clickF();
+                    } catch (UnsupportedAudioFileException ex) {
+                        Logger.getLogger(KeyFrame.class.getName()).log(Level.SEVERE, null, ex);
+                    } catch (IOException ex) {
+                        Logger.getLogger(KeyFrame.class.getName()).log(Level.SEVERE, null, ex);
+                    } catch (LineUnavailableException ex) {
+                        Logger.getLogger(KeyFrame.class.getName()).log(Level.SEVERE, null, ex);
+                    }
+                }
+break;
+                    case KeyEvent.VK_T: {
+                    try {
+                        panel.clickFS();
+                    } catch (UnsupportedAudioFileException ex) {
+                        Logger.getLogger(KeyFrame.class.getName()).log(Level.SEVERE, null, ex);
+                    } catch (IOException ex) {
+                        Logger.getLogger(KeyFrame.class.getName()).log(Level.SEVERE, null, ex);
+                    } catch (LineUnavailableException ex) {
+                        Logger.getLogger(KeyFrame.class.getName()).log(Level.SEVERE, null, ex);
+                    }
+                }
+break;
+                    case KeyEvent.VK_G: {
+                    try {
+                        panel.clickG();
+                    } catch (UnsupportedAudioFileException ex) {
+                        Logger.getLogger(KeyFrame.class.getName()).log(Level.SEVERE, null, ex);
+                    } catch (IOException ex) {
+                        Logger.getLogger(KeyFrame.class.getName()).log(Level.SEVERE, null, ex);
+                    } catch (LineUnavailableException ex) {
+                        Logger.getLogger(KeyFrame.class.getName()).log(Level.SEVERE, null, ex);
+                    }
+                }
+break;
+                    case KeyEvent.VK_Y: {
+                    try {
+                        panel.clickGS();
+                    } catch (UnsupportedAudioFileException ex) {
+                        Logger.getLogger(KeyFrame.class.getName()).log(Level.SEVERE, null, ex);
+                    } catch (IOException ex) {
+                        Logger.getLogger(KeyFrame.class.getName()).log(Level.SEVERE, null, ex);
+                    } catch (LineUnavailableException ex) {
+                        Logger.getLogger(KeyFrame.class.getName()).log(Level.SEVERE, null, ex);
+                    }
+                }
+break;
+                    case KeyEvent.VK_H: {
+                    try {
+                        panel.clickA();
+                    } catch (UnsupportedAudioFileException ex) {
+                        Logger.getLogger(KeyFrame.class.getName()).log(Level.SEVERE, null, ex);
+                    } catch (IOException ex) {
+                        Logger.getLogger(KeyFrame.class.getName()).log(Level.SEVERE, null, ex);
+                    } catch (LineUnavailableException ex) {
+                        Logger.getLogger(KeyFrame.class.getName()).log(Level.SEVERE, null, ex);
+                    }
+                }
+break;
+                    case KeyEvent.VK_U: {
+                    try {
+                        panel.clickAS();
+                    } catch (UnsupportedAudioFileException ex) {
+                        Logger.getLogger(KeyFrame.class.getName()).log(Level.SEVERE, null, ex);
+                    } catch (IOException ex) {
+                        Logger.getLogger(KeyFrame.class.getName()).log(Level.SEVERE, null, ex);
+                    } catch (LineUnavailableException ex) {
+                        Logger.getLogger(KeyFrame.class.getName()).log(Level.SEVERE, null, ex);
+                    }
+                }
+break;
+                    case KeyEvent.VK_J: {
+                    try {
+                        panel.clickB();
+                    } catch (UnsupportedAudioFileException ex) {
+                        Logger.getLogger(KeyFrame.class.getName()).log(Level.SEVERE, null, ex);
+                    } catch (IOException ex) {
+                        Logger.getLogger(KeyFrame.class.getName()).log(Level.SEVERE, null, ex);
+                    } catch (LineUnavailableException ex) {
+                        Logger.getLogger(KeyFrame.class.getName()).log(Level.SEVERE, null, ex);
+                    }
+                }
+break;
+                    case KeyEvent.VK_K: {
+                    try {
+                        panel.clickC2();
+                    } catch (UnsupportedAudioFileException ex) {
+                        Logger.getLogger(KeyFrame.class.getName()).log(Level.SEVERE, null, ex);
+                    } catch (IOException ex) {
+                        Logger.getLogger(KeyFrame.class.getName()).log(Level.SEVERE, null, ex);
+                    } catch (LineUnavailableException ex) {
+                        Logger.getLogger(KeyFrame.class.getName()).log(Level.SEVERE, null, ex);
+                    }
+                }
+break;
+                }
+            }
+            
+            @Override
+            public void keyReleased(KeyEvent e){
+                switch(e.getKeyCode()){
+                    case KeyEvent.VK_A: panel.releaseC(); break;
+                    case KeyEvent.VK_W: panel.releaseCS(); break;
+                    case KeyEvent.VK_S: panel.releaseD(); break;
+                    case KeyEvent.VK_E: panel.releaseDS(); break;
+                    case KeyEvent.VK_D: panel.releaseE(); break;
+                    case KeyEvent.VK_F: panel.releaseF(); break;
+                    case KeyEvent.VK_T: panel.releaseFS(); break;
+                    case KeyEvent.VK_G: panel.releaseG(); break;
+                    case KeyEvent.VK_Y: panel.releaseGS(); break;
+                    case KeyEvent.VK_H: panel.releaseA(); break;
+                    case KeyEvent.VK_U: panel.releaseAS(); break;
+                    case KeyEvent.VK_J: panel.releaseB(); break;
+                    case KeyEvent.VK_K: panel.releaseC2(); break;
+                }
+            }
+        });
         
         this.setUndecorated(true);
+        this.setSize(Toolkit.getDefaultToolkit().getScreenSize().width/2, Toolkit.getDefaultToolkit().getScreenSize().height/3);
+        this.setShape(new RoundRectangle2D.Double(0, 0, getWidth(), getHeight(),50, 50));
+        this.setLocationRelativeTo(null);
         this.setVisible(true);
     }
 }
@@ -42,163 +229,6 @@ class Panel extends JPanel{
     JPanel csk,dsk,fsk,gsk,ask;
     Clip cm, csm, dm, dsm, em, fm, fsm, gm, gsm, am, asm, bm, c2m;
     
-    {
-        try {
-            AudioInputStream csys = AudioSystem.getAudioInputStream(new File("c.wav").getAbsoluteFile());
-            cm = AudioSystem.getClip();
-            cm.open(csys);
-        } catch (UnsupportedAudioFileException ex) {
-            Logger.getLogger(Panel.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (IOException ex) {
-            Logger.getLogger(Panel.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (LineUnavailableException ex) {
-            Logger.getLogger(Panel.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        
-        try {
-            AudioInputStream csys = AudioSystem.getAudioInputStream(new File("cs.wav").getAbsoluteFile());
-            csm = AudioSystem.getClip();
-            csm.open(csys);
-        } catch (UnsupportedAudioFileException ex) {
-            Logger.getLogger(Panel.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (IOException ex) {
-            Logger.getLogger(Panel.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (LineUnavailableException ex) {
-            Logger.getLogger(Panel.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        
-        try {
-            AudioInputStream csys = AudioSystem.getAudioInputStream(new File("d.wav").getAbsoluteFile());
-            dm = AudioSystem.getClip();
-            dm.open(csys);
-        } catch (UnsupportedAudioFileException ex) {
-            Logger.getLogger(Panel.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (IOException ex) {
-            Logger.getLogger(Panel.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (LineUnavailableException ex) {
-            Logger.getLogger(Panel.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        
-        try {
-            AudioInputStream csys = AudioSystem.getAudioInputStream(new File("ds.wav").getAbsoluteFile());
-            dsm = AudioSystem.getClip();
-            dsm.open(csys);
-        } catch (UnsupportedAudioFileException ex) {
-            Logger.getLogger(Panel.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (IOException ex) {
-            Logger.getLogger(Panel.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (LineUnavailableException ex) {
-            Logger.getLogger(Panel.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        
-        try {
-            AudioInputStream csys = AudioSystem.getAudioInputStream(new File("e.wav").getAbsoluteFile());
-            em = AudioSystem.getClip();
-            em.open(csys);
-        } catch (UnsupportedAudioFileException ex) {
-            Logger.getLogger(Panel.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (IOException ex) {
-            Logger.getLogger(Panel.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (LineUnavailableException ex) {
-            Logger.getLogger(Panel.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        
-        try {
-            AudioInputStream csys = AudioSystem.getAudioInputStream(new File("f.wav").getAbsoluteFile());
-            fm = AudioSystem.getClip();
-            fm.open(csys);
-        } catch (UnsupportedAudioFileException ex) {
-            Logger.getLogger(Panel.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (IOException ex) {
-            Logger.getLogger(Panel.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (LineUnavailableException ex) {
-            Logger.getLogger(Panel.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        
-        try {
-            AudioInputStream csys = AudioSystem.getAudioInputStream(new File("fs.wav").getAbsoluteFile());
-            fsm = AudioSystem.getClip();
-            fsm.open(csys);
-        } catch (UnsupportedAudioFileException ex) {
-            Logger.getLogger(Panel.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (IOException ex) {
-            Logger.getLogger(Panel.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (LineUnavailableException ex) {
-            Logger.getLogger(Panel.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        
-        try {
-            AudioInputStream csys = AudioSystem.getAudioInputStream(new File("g.wav").getAbsoluteFile());
-            gm = AudioSystem.getClip();
-            gm.open(csys);
-        } catch (UnsupportedAudioFileException ex) {
-            Logger.getLogger(Panel.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (IOException ex) {
-            Logger.getLogger(Panel.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (LineUnavailableException ex) {
-            Logger.getLogger(Panel.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        
-        try {
-            AudioInputStream csys = AudioSystem.getAudioInputStream(new File("gs.wav").getAbsoluteFile());
-            gsm = AudioSystem.getClip();
-            gsm.open(csys);
-        } catch (UnsupportedAudioFileException ex) {
-            Logger.getLogger(Panel.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (IOException ex) {
-            Logger.getLogger(Panel.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (LineUnavailableException ex) {
-            Logger.getLogger(Panel.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        
-        try {
-            AudioInputStream csys = AudioSystem.getAudioInputStream(new File("a.wav").getAbsoluteFile());
-            am = AudioSystem.getClip();
-            am.open(csys);
-        } catch (UnsupportedAudioFileException ex) {
-            Logger.getLogger(Panel.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (IOException ex) {
-            Logger.getLogger(Panel.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (LineUnavailableException ex) {
-            Logger.getLogger(Panel.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        
-        try {
-            AudioInputStream csys = AudioSystem.getAudioInputStream(new File("as.wav").getAbsoluteFile());
-            asm = AudioSystem.getClip();
-            asm.open(csys);
-        } catch (UnsupportedAudioFileException ex) {
-            Logger.getLogger(Panel.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (IOException ex) {
-            Logger.getLogger(Panel.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (LineUnavailableException ex) {
-            Logger.getLogger(Panel.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        
-        try {
-            AudioInputStream csys = AudioSystem.getAudioInputStream(new File("b.wav").getAbsoluteFile());
-            bm = AudioSystem.getClip();
-            bm.open(csys);
-        } catch (UnsupportedAudioFileException ex) {
-            Logger.getLogger(Panel.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (IOException ex) {
-            Logger.getLogger(Panel.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (LineUnavailableException ex) {
-            Logger.getLogger(Panel.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        
-        try {
-            AudioInputStream csys = AudioSystem.getAudioInputStream(new File("c2.wav").getAbsoluteFile());
-            c2m = AudioSystem.getClip();
-            c2m.open(csys);
-        } catch (UnsupportedAudioFileException ex) {
-            Logger.getLogger(Panel.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (IOException ex) {
-            Logger.getLogger(Panel.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (LineUnavailableException ex) {
-            Logger.getLogger(Panel.class.getName()).log(Level.SEVERE, null, ex);
-        }
-    }
     public Panel(){
         this.setBackground(Color.GRAY);
         this.setLayout(new GridLayout(1,14));
@@ -348,77 +378,116 @@ class Panel extends JPanel{
         this.add(c2);
     }
     
-    public void clickC(){
+    public void clickC() throws LineUnavailableException, IOException, UnsupportedAudioFileException{
+        AudioInputStream csys = AudioSystem.getAudioInputStream(new File("c.wav").getAbsoluteFile());
+        cm = AudioSystem.getClip();
+        cm.open(csys);
         c.setBackground(Color.LIGHT_GRAY);
         ch.setBackground(Color.LIGHT_GRAY);
         cm.start();
     }
     
-    public void clickCS(){
+    public void clickCS() throws UnsupportedAudioFileException, IOException, LineUnavailableException{
+        AudioInputStream csys = AudioSystem.getAudioInputStream(new File("cs.wav").getAbsoluteFile());
+        csm = AudioSystem.getClip();
+        csm.open(csys);
         csk.setBackground(Color.GRAY);
         csm.start();
     }
     
-    public void clickD(){
+    public void clickD() throws UnsupportedAudioFileException, IOException, LineUnavailableException{
+        AudioInputStream csys = AudioSystem.getAudioInputStream(new File("d.wav").getAbsoluteFile());
+        dm = AudioSystem.getClip();
+        dm.open(csys);
         d.setBackground(Color.LIGHT_GRAY);
         dh.setBackground(Color.LIGHT_GRAY);
         dh2.setBackground(Color.LIGHT_GRAY);
         dm.start();
     }
     
-    public void clickDS(){
+    public void clickDS() throws LineUnavailableException, IOException, UnsupportedAudioFileException{
+        AudioInputStream csys = AudioSystem.getAudioInputStream(new File("ds.wav").getAbsoluteFile());
+        dsm = AudioSystem.getClip();
+        dsm.open(csys);
         dsk.setBackground(Color.GRAY);
         dsm.start();
     }
     
-    public void clickE(){
+    public void clickE() throws UnsupportedAudioFileException, IOException, LineUnavailableException{
+        AudioInputStream csys = AudioSystem.getAudioInputStream(new File("e.wav").getAbsoluteFile());
+        em = AudioSystem.getClip();
+        em.open(csys);
         e.setBackground(Color.LIGHT_GRAY);
         eh.setBackground(Color.LIGHT_GRAY);
         em.start();
     }
     
-    public void clickF(){
+    public void clickF() throws UnsupportedAudioFileException, IOException, LineUnavailableException{
+        AudioInputStream csys = AudioSystem.getAudioInputStream(new File("f.wav").getAbsoluteFile());
+        fm = AudioSystem.getClip();
+        fm.open(csys);
         f.setBackground(Color.LIGHT_GRAY);
         fh.setBackground(Color.LIGHT_GRAY);
         fm.start();
     }
     
-    public void clickFS(){
+    public void clickFS() throws UnsupportedAudioFileException, IOException, LineUnavailableException{
+        AudioInputStream csys = AudioSystem.getAudioInputStream(new File("fs.wav").getAbsoluteFile());
+        fsm = AudioSystem.getClip();
+        fsm.open(csys);
         fsk.setBackground(Color.GRAY);
         fsm.start();
     }
     
-    public void clickG(){
+    public void clickG() throws UnsupportedAudioFileException, IOException, LineUnavailableException{
+        AudioInputStream csys = AudioSystem.getAudioInputStream(new File("g.wav").getAbsoluteFile());
+        gm = AudioSystem.getClip();
+        gm.open(csys);
         g.setBackground(Color.LIGHT_GRAY);
         gh.setBackground(Color.LIGHT_GRAY);
         gh2.setBackground(Color.LIGHT_GRAY);
         gm.start();
     }
     
-    public void clickGS(){
+    public void clickGS() throws UnsupportedAudioFileException, IOException, LineUnavailableException{
+        AudioInputStream csys = AudioSystem.getAudioInputStream(new File("gs.wav").getAbsoluteFile());
+        gsm = AudioSystem.getClip();
+        gsm.open(csys);
         gsk.setBackground(Color.GRAY);
         gsm.start();
     }
     
-    public void clickA(){
+    public void clickA() throws UnsupportedAudioFileException, IOException, LineUnavailableException{
+        AudioInputStream csys = AudioSystem.getAudioInputStream(new File("a.wav").getAbsoluteFile());
+        am = AudioSystem.getClip();
+        am.open(csys);
         a.setBackground(Color.LIGHT_GRAY);
         ah.setBackground(Color.LIGHT_GRAY);
         ah2.setBackground(Color.LIGHT_GRAY);
         am.start();
     }
     
-    public void clickAS(){
+    public void clickAS() throws UnsupportedAudioFileException, IOException, LineUnavailableException{
+        AudioInputStream csys = AudioSystem.getAudioInputStream(new File("as.wav").getAbsoluteFile());
+        asm = AudioSystem.getClip();
+        asm.open(csys);
         ask.setBackground(Color.GRAY);
-        am.start();
+        asm.start();
     }
     
-    public void clickB(){
+    public void clickB() throws UnsupportedAudioFileException, IOException, LineUnavailableException{
+        AudioInputStream csys = AudioSystem.getAudioInputStream(new File("b.wav").getAbsoluteFile());
+        bm = AudioSystem.getClip();
+        bm.open(csys);
         b.setBackground(Color.LIGHT_GRAY);
         bh.setBackground(Color.LIGHT_GRAY);
         bm.start();
     }
     
-    public void clickC2(){
+    public void clickC2() throws UnsupportedAudioFileException, IOException, LineUnavailableException{
+        AudioInputStream csys = AudioSystem.getAudioInputStream(new File("c2.wav").getAbsoluteFile());
+        c2m = AudioSystem.getClip();
+        c2m.open(csys);
         c2.setBackground(Color.LIGHT_GRAY);
         c2m.start();
     }
@@ -484,7 +553,7 @@ class Panel extends JPanel{
     
     public void releaseAS(){
         ask.setBackground(Color.BLACK);
-        am.stop();
+        asm.stop();
     }
     
     public void releaseB(){
@@ -494,7 +563,7 @@ class Panel extends JPanel{
     }
     
     public void releaseC2(){
-        c2.setBackground(Color.BLACK);
+        c2.setBackground(Color.WHITE);
         c2m.stop();
     }
 }
