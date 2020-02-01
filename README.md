@@ -11,7 +11,7 @@
 
 **Software Used:**
 
-1. Arduino IDE
+ Arduino IDE
 
 **Workshop Skill Break-up**
 
@@ -19,9 +19,9 @@
 
 **Workshop Overview**
 
-Makey-Makey is an Invention Kit that has a similar functionality to a microcontroller. It is suitable for all ages as it is a simple electronic device. Makey-Makey allows a wide range of creativity since it works as a smart toy that enables users to connect everyday objects to computer programs. Using a circuit board, alligator clips, and a USB cable, the toy uses closed loop electrical signals to send the computer either a keyboard stroke or mouse click signal. The kit could be designed to make music,
+Capacitive touch allows a circuit to be completed by the touch of a human's finger. This is a hardware-based workshop to inspire interest in electrical circuits as well as to start programming on Arduino. It is based on the invention kit called MaKey MaKey which is an Arduino-based microcontroller board, it allows extremely simple connections. We will be emulating this by capacitive touch principle. 
 
-scrub through a video clip or control a video game. In this workshop, we will play the piano by touching flowers, control a video game using hand-drawn sketches and create a music thermin out of pencil graphite.
+In this workshop, we will play the piano by touching flowers, control a video game using hand-drawn sketches and make a light switch with capacitive touch. 
 
 **Pre-Workshop Steps**
 
