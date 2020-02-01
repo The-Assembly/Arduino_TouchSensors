@@ -78,3 +78,8 @@ Invoke-WebRequest -Uri "https://www.python.org/ftp/python/3.7.0/python-3.7.0.exe
 c:/temp/python-3.7.0.exe /quiet InstallAllUsers=0 PrependPath=1 Include_test=0
 
 Write-Host "Please wait while the script installs the necessary python libraries"
+Write-Host "Installing Python Serial Library..."
+pip install pyserial
+Write-Host "Installing Python Keyboard Library..."
+pip install keyboard
+Write-Host "Successfully Installed the Pre Requisites for the Workshop, Enjoy!!"
