@@ -29,7 +29,7 @@ Download Arduino IDE
 
 Python 2.7 and Pip installed.
 
-**Rawaan&#39;s part:**
+**==============================Part 1===================================**
 
 <img src ='/Images/Piano.png'>
 
@@ -63,7 +63,7 @@ Python 2.7 and Pip installed.
 
 
 
-**Asif&#39;s part:**
+**==============================Part 2===================================**
 
 <img src = '/Images/Controller.png'>
 
@@ -95,7 +95,7 @@ Python 2.7 and Pip installed.
 
 13. Have fun!
 
-**Seba&#39;s part**
+**==============================Part 3===================================**
 
 Introduction to Capacitive Touch Concept
 
@@ -122,145 +122,3 @@ Part a :
 
 
 
-Part b  Code w/ comments to further explain
- ```
- #include \&lt;CapacitiveSensor.h\&gt;
-
- //setting the digital pins across the resistor that would be the input and output using the function that turns the arduino   pins into touch sensors so 4 is the output in the case below
-
- CapacitiveSensor   cs\_2\_4 = CapacitiveSensor(2,4);// 1M resistor between pins 2 &amp; 4, pin 4 is sensor pin, add a wire and or foil
-
- CapacitiveSensor   cs\_3\_5 = CapacitiveSensor(3,5);
-
- //setting digital input sensor pins
-
- int in\_1 = 2;
- 
- int in\_2 =3;
-
- //buzzer power pin
-
- int Piezopin= 12;
-
- //setting digital output sensor pins
-
- int out = 4;
-
- int out2 =5;
-
- //to be later used to simplify logic
-
- int state = HIGH;
-
- //a variable to store the reading states of the output sensor  
-
- int r;
-
- int a;
-
- //to be later used to simplify logic          
-
- int p = LOW;
-
- long time = 0;
-
- //debouncing used as if user keeps his hand on the coin, without removing it within seconds, led&#39;s will keep blinking aka debounce
-
- long debounce = 200;
-
- void setup()
-
- {
-
-   //4 is the output sensor pin across the 1st resistor
-
-   pinMode(4, INPUT);
-
-   // 8 is the power pin of the first LED
-
-   pinMode(8, OUTPUT);
-
-   //5 is the output sensor pin across the 2nd resistor
-
-   pinMode(5,INPUT);
-
-   // 10 os the power pin of the 2nd LED
-
-   pinMode(10,OUTPUT);
-
- }
-
- void loop()
-
- {
-
-   //OUTPUT FROM SENSOR PINS IS STORED IN THOSE VARIABLES TO BE LATER USED FOR SIMPLIFICATION
-
-   r = digitalRead(4);
-
-   a=  digitalRead(5);
-
-   //this line suggests that if you touch the led once so time delay is low, then it would enter the loop, and according to previous state led will turn on/off,
-
-   //however if time delay increases meaning your hand is still touching the coin, led will keep blinking --\&gt; touchong time should be less than 200 mses which is bouncing time as set b4
-
-  //Here, we are reading the 1st resistor output sensor pin which is r corresponding with pin 4
-
-   if (r == HIGH &amp;&amp; p == LOW &amp;&amp; millis() - time \&gt; debounce)
-
-   {
-
-     **//changes the state of the led depending on the previous state so if its high and you touch the coin, it&#39;ll become low \&lt;turn off\&gt;
-
-    if (state == HIGH)
-
-      state = LOW;
-
-      //if you don&#39;t touch again, obviously will remain high
-
-    else
-
-      state = HIGH;
-
-      //setting time to msec**
-
-    time = millis();
-
-    //setting the buzzer to a certain frequency to show diff sounds when touching diff coins
-
-    tone (Piezopin,30000,500);
-
-    //writing the led state aka outputting it
-
-    digitalWrite(8, state);
-
-    p = r;
-
-   }
- 
-  // exactly same as above but in this case we are reading the 2nd resistor output senesor pin which is a corresponding with pin 5
-
-    else if (a == HIGH &amp;&amp; p == LOW &amp;&amp; millis() -time \&gt;debounce)
-
-    {
-
-      if (state == HIGH)
-
-      state = LOW;
-
-      else
-
-      state = HIGH;
-
-      time = millis();
-
-      tone (Piezopin,3000,500);
-
-      digitalWrite (10,state);
-
-      p=a;
-
-    }
- 
- }
- ```
