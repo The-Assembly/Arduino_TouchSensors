@@ -69,9 +69,12 @@ Write-Host "
   8    t;.  . t  8X   .; @@8X@8@8S8Xtt 88.t8Xtt 88:. 88t..S.S8@8: 8 .@@8% :@@ ;88@.;X88.:..@ :@X: .
   S8   t.;  .Xt  X;@88:@X8@. t.8:t S888.t.8 S@88.t.: X88@@  X@88 8tS.S88X t@8X88%X@ @X@@8@8.  8@ .  
 "
-
+Write-Host "Thank you for attending The Assembly's Workshop!"
+Write-Host "Please wait while the scipt installs python..."
 [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
 
 Invoke-WebRequest -Uri "https://www.python.org/ftp/python/3.7.0/python-3.7.0.exe" -OutFile "c:/temp/python-3.7.0.exe"
 
 c:/temp/python-3.7.0.exe /quiet InstallAllUsers=0 PrependPath=1 Include_test=0
+
+Write-Host "Please wait while the script installs the necessary python libraries"
