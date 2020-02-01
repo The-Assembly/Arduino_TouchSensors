@@ -15,5 +15,5 @@ while True:
     stri = stri.replace('\n','')
     print(stri)
     keyboard.press(stri)
-    time.sleep(0.5)
+    time.sleep(0.7)
     keyboard.release(stri)
