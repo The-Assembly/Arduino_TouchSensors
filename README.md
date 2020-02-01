@@ -31,6 +31,8 @@ Python 2.7 and Pip installed.
 
 **Rawaan&#39;s part:**
 
+<img src ='/Images/Piano.png'>
+
 **Steps:**
 
 1. Download the Makey\_DIY zip folder and save it.
