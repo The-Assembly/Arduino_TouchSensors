@@ -3,10 +3,10 @@
 **Components Needed:**
 
 - Arduino Uno
-- 4-6 Resistors
+- 8 Resistors
 - Breadboard
-- 6-8 Jumper Cables
-- 4-6 Alligator Clips
+- 18 Jumper Cables
+- 8 Alligator Clips
 - USB Cable
 
 **Software Used:**
