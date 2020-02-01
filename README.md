@@ -172,19 +172,19 @@ Part b  Code w/ comments to further explain
 
  {
 
-   //4 is the output sensor pin across the 1st resistor**
+   //4 is the output sensor pin across the 1st resistor
 
    pinMode(4, INPUT);
 
-   // 8 is the power pin of the first LED**
+   // 8 is the power pin of the first LED
 
    pinMode(8, OUTPUT);
 
-   //5 is the output sensor pin across the 2nd resistor**
+   //5 is the output sensor pin across the 2nd resistor
 
    pinMode(5,INPUT);
 
-   // 10 os the power pin of the 2nd LED**
+   // 10 os the power pin of the 2nd LED
 
    pinMode(10,OUTPUT);
 
@@ -210,27 +210,27 @@ Part b  Code w/ comments to further explain
 
    {
 
-     **//changes the state of the led depending on the previous state so if its high and you touch the coin, it&#39;ll become low \&lt;turn off\&gt;**
+     **//changes the state of the led depending on the previous state so if its high and you touch the coin, it&#39;ll become low \&lt;turn off\&gt;
 
     if (state == HIGH)
 
       state = LOW;
 
-      **//if you don&#39;t touch again, obviously will remain high**
+      //if you don&#39;t touch again, obviously will remain high
 
     else
 
       state = HIGH;
 
-      **//setting time to msec**
+      //setting time to msec**
 
     time = millis();
 
-    **//setting the buzzer to a certain frequency to show diff sounds when touching diff coins**
+    //setting the buzzer to a certain frequency to show diff sounds when touching diff coins
 
     tone (Piezopin,30000,500);
 
-    **//writing the led state aka outputting it**
+    //writing the led state aka outputting it
 
     digitalWrite(8, state);
 
