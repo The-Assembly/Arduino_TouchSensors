@@ -83,3 +83,5 @@ pip install pyserial
 Write-Host "Installing Python Keyboard Library..."
 pip install keyboard
 Write-Host "Successfully Installed the Pre Requisites for the Workshop, Enjoy!!"
+Write-Host "Press any key to continue ..."
+$x = $host.UI.RawUI.ReadKey("NoEcho,IncludeKeyDown")
